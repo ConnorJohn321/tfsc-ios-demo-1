@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setProfileResult:(void(^)(NSString * out_private_key , NSString * out_public_key , NSString * mnemonic , NSString * walletAddress))result;
 -(void)importMnemonic:(NSString *)MnemonicString result:(void(^)(NSString * out_private_key , NSString * out_public_key , NSString * walletAddress))result;
 -(void)importpridata:(NSString *)pridataString result:(void(^)( NSString * out_public_key , NSString * walletAddress,  NSString * mnemonic))result;
-
+/**
+ transaction body signature
+ */
 -(void)sigWithmessage:(NSString *)message privateKey:(NSString *)privateKey result:(void(^)(NSString * signature))result;
 
 @end
